@@ -2,12 +2,49 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>轮播图</title>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../assets/css/swiper.css">
 </head>
 
 <body>
 
+    <div class="layui-card">
+        <div class="layui-card-header" style="font-size: 20px">轮播图
+            <input type="file" style="display: none" class="aaa" multiple="multiple">
+            <button type="button" class="layui-btn layui-btn-danger" style="float: right;"><i
+                    class="layui-icon">&#xe67c;</i>上传图片</button>
+        </div>
+        <div class="layui-card-body">
+            <table class="layui-table" style="background-color:powderblue;">
+                <colgroup>
+                    <col width="5%">
+                    <col width="20%">
+                    <col width="30%">
+                    <col width="10%">
+                    <col width="10%">
+                </colgroup>
+                <thead>
+                    <tr style="background-color: paleturquoise;">
+                        <th>ID</th>
+                        <th>图片预览</th>
+                        <th>图片路径</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="app">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="../assets/lib/jquery.js"></script>
+    <script src="../assets/lib/layui/layui.all.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/swiper/swiper.js"> </script>
 </body>
 
 </html>
