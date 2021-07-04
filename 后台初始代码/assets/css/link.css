@@ -1,0 +1,12 @@
+.header h3 {
+    float: left;
+}
+
+.header .button {
+    float: right;
+}
+
+.back {
+    background-color: black;
+    text-align: center;
+}

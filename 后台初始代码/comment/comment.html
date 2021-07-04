@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>评论模块</title>
+    <meta charset="UTF-8">
+    <title>评论模块</title>
+    <link rel="stylesheet" type="text/css" href="../assets/lib/layui/css/layui.css">
 </head>
+
 <body>
-  
+    <div class="layui-card">
+        <div class="layui-card-header">
+            <p>评论管理</p>
+        </div>
+        <div class="layui-card-body">
+            <table class="layui-table">
+                <colgroup>
+                    <col width="150">
+                    <col width="200">
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>评论人</th>
+                        <th>评论内容</th>
+                        <th>评论时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button data-id="" type="button" class="layui-btn layui-btn-xs layui-btn-danger delete">
+                                删除
+                            </button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../assets/lib/jquery.js"></script>
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script type="text/javascript" src="../assets/lib/layui/layui.all.js"></script>
+    <script type="text/javascript" src="../assets/js/comment/comment.js"></script>
 </body>
+
 </html>

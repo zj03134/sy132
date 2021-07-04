@@ -1,10 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ch-ZN">
+
 <head>
-  <meta charset="UTF-8">
-  <title>友情链接</title>
+    <meta charset="UTF-8">
+    <title>友情链接</title>
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../assets/css/link.css">
 </head>
+
 <body>
-  
+    <div class="layui-card">
+        <div class="layui-card-header header">
+            <h3>友情链接</h3>
+            <div class="layui-input-block button">
+                <button class="layui-btn addLink" lay-submit lay-filter="formDemo">添加链接</button>
+            </div>
+        </div>
+
+        <div class="layui-card-body">
+            <table class="layui-table">
+                <colgroup>
+                    <col width="5%">
+                    <col width="15%">
+                    <col width="20%">
+                    <col width="30%">
+                    <col width="10%">
+                    <col width="20%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>链接图标</th>
+                        <th>链接名称</th>
+                        <th>链接地址</th>
+                        <th>链接描述</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 添加链接模板 -->
+    <script type="text/html" id="addLink">
+        <form class="layui-form" action="" id="addForm">
+            <div class="layui-form-item">
+                <label class="layui-form-label">链接名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="linkname" required lay-verify="required" placeholder="请输入连接名"
+                        autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">连接地址</label>
+                <div class="layui-input-block">
+                    <input type="text" name="linkurl" required lay-verify="required" placeholder="请输入连接名"
+                        autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">连接描述</label>
+                <div class="layui-input-block">
+                    <input type="text" name="linkdesc" required lay-verify="required" placeholder="请输入连接名"
+                        autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <!-- 上唇图片 -->
+            <div class="layui-form-item">
+                <div class="layui-form-item">
+                    <div class="layui-input-block icon-url">
+                        <button type="button" class="layui-btn layui-btn-sm" id="addImg">
+                            <i class="layui-icon">&#xe67c;</i>上传图片
+                        </button>
+                        <input type="file" name="linkicon" id="file" style="display: none;">
+                        <img id="Img" src="" style="width: 30px; height: 30px;display: none;">
+                    </div>
+                </div>
+            </div>
+            <!-- 提交 -->
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn  layui-btn-sm" lay-submit lay-filter="formDemo">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                </div>
+            </div>
+        </form>
+    </script>
+    <!-- 编辑模块 -->
+    <script type="text/html" id="editLink">
+        <form class="layui-form" action="" id="editForm" lay-filter="editFrom">
+            <div class="layui-form-item">
+                <label class="layui-form-label">链接名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="linkname" required lay-verify="required" placeholder="请输入连接名"
+                        autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">连接地址</label>
+                <div class="layui-input-block">
+                    <input type="text" name="linkurl" required lay-verify="required" placeholder="请输入连接名"
+                        autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">连接描述</label>
+                <div class="layui-input-block">
+                    <input type="text" name="linkdesc" required lay-verify="required" placeholder="请输入连接名"
+                        autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <!-- 上唇图片 -->
+            <div class="layui-form-item">
+                <div class="layui-form-item">
+                    <div class="layui-input-block icon-url">
+                        <button type="button" class="layui-btn layui-btn-sm" id="addImg">
+                            <i class="layui-icon">&#xe67c;</i>上传图片
+                        </button>
+                        <input type="file" name="linkicon" id="file" style="display: none;">
+                        <img id="Img" src="" style="width: 30px; height: 30px;display: none;">
+                    </div>
+                </div>
+            </div>
+            <!-- 提交 -->
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn  layui-btn-sm" lay-submit lay-filter="formDemo">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                </div>
+            </div>
+        </form>
+    </script>
+    <script type="text/javascript" src="../assets/lib/jquery.js"></script>
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script type="text/javascript" src="../assets/lib/layui/layui.all.js"></script>
+    <script type="text/javascript" src="../assets/js/link/link.js"></script>
 </body>
+
 </html>
