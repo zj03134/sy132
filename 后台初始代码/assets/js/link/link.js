@@ -58,6 +58,7 @@
                 contentType: false,
                 success: function (res) {
                     if (res.status == 0) {
+                        layer.msg(res.message)
                         layer.close(index);
                         getLink();
                     }
@@ -70,7 +71,7 @@
     $('tbody').on('click', '.delete', function () {
         let id = $(this).data('id');
         console.log(id);
-        layer.confirm('删你个xxxx', function (index) {
+        layer.confirm('确实要删除吗?', function (index) {
             $.ajax({
                 type: 'DELETE',
                 url: '/admin/links/' + id,
@@ -79,7 +80,7 @@
                         getLink();
                         layer.close(index);
                         layer.msg('删除成功', {
-                            icon: 5
+                            icon: 6
                         })
                     }
                 }
