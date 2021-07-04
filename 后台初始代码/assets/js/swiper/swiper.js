@@ -18,8 +18,8 @@ function xuanran() {
                         <td><img src="http://localhost:8888/uploads/${item.swiperimg}"></td>
                         <td>${item.swiperimg}</td>
                         <td>
-                        <span data-id=${item.id} data-status=2 style="display: ${status}" class="layui-badge layui-bg-grenn">对</span>
-                        <span data-id=${item.id} data-status=1 style="display: ${statuselse}" class="layui-badge layui-bg-red">错</span>
+                        <span data-id=${item.id} data-status=2 style="display: ${status};" class="layui-badge">√</span>
+                        <span data-id=${item.id} data-status=1 style="display: ${statuselse}" class="layui-badge layui-bg-green">×</span>
                         </td>
                         <td>
                             <button data-id=${item.id} type="button" class="layui-btn layui-btn-primary layui-border-blue"

@@ -6,7 +6,6 @@
             success: function (res) {
                 if (res.status == 0) {
                     let str = '';
-                    console.log(res.data);
                     res.data.forEach(function (item) {
                         str += `<tr>
                         <td>${item.id}</td>
